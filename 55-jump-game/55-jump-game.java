@@ -3,14 +3,14 @@ class Solution {
         int n = nums.length;
         if(n==1)
             return true;
-        int max = 0; // max is maximum jump
-        for(int i=0;i<n-1 && max>=i;i++)
+        int index = n-1;
+        for(int i=n-1;i>=0;i--)
         {
-            if(max<i + nums[i])
-                max = i + nums[i];
-            if(max>=n-1)
-                return true;
+            if(nums[i]+i>=index)
+                index = i;
         }
+        if(index == 0)
+            return true;
         return false;
     }
 }
