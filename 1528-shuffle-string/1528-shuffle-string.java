@@ -5,9 +5,10 @@ class Solution {
         {
             c[indices[i]] = s.charAt(i);
         }
-        String ans = "";
-        for(char i:c)
-            ans += Character.toString(i);
-        return ans;
+        // String ans = "";
+        // for(char i:c)
+        //     ans += Character.toString(i);
+        String str = String.copyValueOf(c);
+        return str;
     }
 }
