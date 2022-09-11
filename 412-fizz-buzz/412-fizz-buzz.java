@@ -1,17 +1,17 @@
 class Solution {
     public List<String> fizzBuzz(int n) {
-        String[] answer = new String[n];
+        List answer = new ArrayList();
         for(int i=1; i<=n;i++)
         {
             if(i%3==0 && i%5==0)
-                answer[i-1] = "FizzBuzz";
+                answer.add(i-1,"FizzBuzz");
             else if(i%3 == 0)
-                answer[i-1] = "Fizz";
+                answer.add(i-1,"Fizz");
             else if(i%5==0)
-                answer[i-1] = "Buzz";
+                answer.add(i-1,"Buzz");
             else
-                answer[i-1] = i + "";
+                answer.add(i-1,String.valueOf(i));
         }
-        return Arrays.stream(answer).collect(Collectors.toList());
+        return answer;
     }
 }
