@@ -14,10 +14,9 @@
  * }
  */
 class Solution {
-    List<Integer> list = new ArrayList<Integer>();
-    public List<Integer> preorderTraversal(TreeNode root) {
-        
-        
+    public List<Integer> preorderTraversal(TreeNode root) 
+    {
+        List<Integer> list = new ArrayList<Integer>();
         if(root==null)
             return list; 
         Stack<TreeNode> stack = new Stack<>();
