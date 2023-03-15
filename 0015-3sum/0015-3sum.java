@@ -9,7 +9,7 @@ class Solution {
             if(i==0 || (i>0 && nums[i]!=nums[i-1]))
             {
                 int low = i+1, high = nums.length-1;
-                int sum = 0 - nums[i];
+                int sum = 0 - nums[i]; // if nums[i] = -4 then it will become 4 and we will check is there are any two numbers present whose sum is equals to 4, so that after adding three of the numbers we can get 0 as a sum.
                 while(low<high)
                 {
                     if(nums[low]+nums[high]==sum)
